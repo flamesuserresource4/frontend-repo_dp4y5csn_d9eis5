@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-black pt-28">
+    <section className="relative bg-black pt-28">
       {/* Global aura background */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/3 top-1/2 h-[90vmin] w-[90vmin] -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(57,255,20,0.2),rgba(57,255,20,0.06)_50%,transparent_75%)] blur-3xl" />
@@ -70,18 +70,15 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* 3D column - unframed, large and clear */}
+          {/* 3D column - fully visible, no frame */}
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.35, duration: 0.6 }}
-            className="relative mx-auto h-[420px] w-full max-w-[720px] sm:h-[520px] lg:h-[560px]"
+            className="relative mx-auto w-full max-w-[880px] aspect-square overflow-visible"
             aria-label="Interactive 3D avatar"
           >
-            {/* Soft glow behind the 3D element */}
-            <div aria-hidden className="pointer-events-none absolute -inset-8 -z-10 rounded-[3rem] bg-[conic-gradient(from_180deg_at_50%_50%,rgba(57,255,20,0.5),transparent_40%,rgba(57,255,20,0.3),transparent_70%,rgba(57,255,20,0.2))] blur-3xl" />
-
-            {/* Spline canvas fills container without frame */}
+            {/* Spline canvas fills container with no overlays or frames */}
             <div className="absolute inset-0">
               <Spline
                 scene="https://prod.spline.design/69O6iQ4LWiq4XVD9/scene.splinecode"
