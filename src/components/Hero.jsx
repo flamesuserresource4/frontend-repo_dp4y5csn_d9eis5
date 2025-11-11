@@ -70,9 +70,14 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.25, duration: 0.6 }}
-          className="relative mx-auto mt-10 w-full max-w-5xl"
+          className="relative mx-auto mt-[30px] w-full max-w-5xl" // reduced by ~10px from 40px
           aria-label="Interactive 3D scene"
         >
+          {/* Local aura directly behind the 3D element */}
+          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+            <div className="absolute left-1/2 top-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl bg-[radial-gradient(circle_at_center,rgba(57,255,20,0.35)_0%,rgba(57,255,20,0.18)_40%,rgba(0,0,0,0)_75%)]" />
+          </div>
+
           <div className="mx-auto aspect-[16/10] w-full overflow-visible">
             {/* Using the Spline web component directly */}
             <spline-viewer
