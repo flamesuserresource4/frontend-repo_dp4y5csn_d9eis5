@@ -87,8 +87,8 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Subtle bottom fade */}
-        <div aria-hidden className="pointer-events-none mt-16 h-24 w-full bg-gradient-to-b from-transparent to-black" />
+        {/* Subtle bottom fade with tighter spacing */}
+        <div aria-hidden className="pointer-events-none mt-8 h-16 w-full bg-gradient-to-b from-transparent to-black" />
       </div>
     </section>
   )

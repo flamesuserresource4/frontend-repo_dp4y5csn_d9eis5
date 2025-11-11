@@ -13,7 +13,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className="relative py-16 bg-black">
+    <section className="relative pt-8 pb-16 bg-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-white">Core Skills</h2>
         <p className="text-neutral-400 mt-2">Product thinking, aesthetics, accessibility, and delight.</p>
