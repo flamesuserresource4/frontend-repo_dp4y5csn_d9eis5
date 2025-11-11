@@ -79,7 +79,7 @@ export default function Hero() {
             {/* Spline canvas */}
             <div className="aspect-[16/9] w-full">
               <Spline
-                scene="https://prod.spline.design/Y7DK6OtMHusdC345/scene.splinecode"
+                scene="https://prod.spline.design/69O6iQ4LWiq4XVD9/scene.splinecode"
                 style={{ width: '100%', height: '100%' }}
               />
             </div>
