@@ -17,13 +17,13 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-black pt-28">
       {/* Aura background behind the 3D element */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/2 top-[56%] h-[95vmin] w-[95vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(57,255,20,0.22),rgba(57,255,20,0.08)_55%,transparent_80%)] blur-3xl" />
-        <div className="absolute right-[-15%] top-[-10%] h-[60vmin] w-[60vmin] rounded-full bg-[radial-gradient(circle_at_center,rgba(57,255,20,0.16),transparent_60%)] blur-3xl" />
+        <div className="absolute left-1/2 top-[56%] h-[100vmin] w-[100vmin] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_center,rgba(168,255,210,0.22),rgba(120,255,180,0.10)_55%,transparent_80%)] blur-[70px]" />
+        <div className="absolute right-[-15%] top-[-10%] h-[60vmin] w-[60vmin] rounded-full bg-[radial-gradient(circle_at_center,rgba(168,255,210,0.18),transparent_60%)] blur-[60px]" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black" />
       </div>
 
       {/* Content wrapper */}
-      <div className="relative z-10 mx-auto max-w-6xl px-4">
+      <div className="relative z-10 mx-auto max-w-7xl px-4">
         {/* Centered heading and CTAs above the 3D */}
         <div className="text-center">
           <motion.h1
@@ -70,15 +70,15 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.25, duration: 0.6 }}
-          className="relative mx-auto mt-[30px] w-full max-w-5xl" // reduced by ~10px from 40px
+          className="relative mx-auto mt-[30px] w-full max-w-7xl"
           aria-label="Interactive 3D scene"
         >
-          {/* Local aura directly behind the 3D element */}
+          {/* Local aura directly behind the 3D element (softer green) */}
           <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-            <div className="absolute left-1/2 top-1/2 h-[120%] w-[120%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl bg-[radial-gradient(circle_at_center,rgba(57,255,20,0.35)_0%,rgba(57,255,20,0.18)_40%,rgba(0,0,0,0)_75%)]" />
+            <div className="absolute left-1/2 top-1/2 h-[140%] w-[140%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[72px] bg-[radial-gradient(circle_at_center,rgba(168,255,210,0.5)_0%,rgba(120,255,180,0.26)_40%,rgba(57,255,20,0.12)_62%,rgba(0,0,0,0)_80%)]" />
           </div>
 
-          <div className="mx-auto aspect-[16/10] w-full overflow-visible">
+          <div className="mx-auto w-full overflow-visible aspect-[16/9] lg:aspect-[16/8]">
             {/* Using the Spline web component directly */}
             <spline-viewer
               url="https://prod.spline.design/zbfihsUSio91-2EK/scene.splinecode"
